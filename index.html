@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS EXAM</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <script type="text/javascript" src="app.js"></script>
+  
+  <h1>Simple expense manager project</h1>
+  <h2>Add a new item:</h2>
+  <h3>Add a friend <span>&#43</span></h3>
+  <form name="myForm" action="index.html" on="return validateform()" method="post">
+    <div id="div1">
+      <label for="type" id="type">Type:</label>
+      <select name="type" id="type">
+        <option value="cash">Cash</option>
+        <option value="card">Card</option>
+        <option value="other">other</option>
+      </select>
+      <br> <br>
+      <label for="name" id="name">Name:</label>
+      <input type="text" name="name" placeholder="What did you spend on?">
+      <br> <br>
+      <label for="currency" id="currency">Currency:</label>
+      <select name="currency" id="currency">
+        <option value="usd">USD</option>
+        <option value="rupee">Rupee</option>
+        <option value="dirham">Dirham</option>
+        <option value="pound">British pound</option>
+      </select>
+      
+  
+      <br> <br>
+    </div>
+
+    <div id="div2">
+      <label for="add friend" id="add friend">Add friend:</label>
+      <select name="add friend" id="add friend">
+
+        <option value="Andy">Andy</option>
+        <option value="Sandy">Sandy</option>
+        <option value="Randy">Randy</option>
+        <option value="Fandy">Fandy</option>
+      </select>
+
+      <br><br>
+
+      <label for="date" id="date">Date:</label>
+      <input type="date" name="date" id="date">
+      <br><br>
+
+      <label for="amount" id="amount">Amount:</label>
+      <input type="number" step="100" name="amount" placeholder="How much?" required>
+      <small>cannot be empty</small>
+      <br><br>
+    </div>
+
+  
+  <br><br><br><br><br><br><br><br><br><br>
+  <form>
+    <button> <input type="button" value="Add a new expense" id="button" onclick="submit"/></button>
+  </form>
+  <br> <br>
+
+
+  <table style="width: 80%;" id="table">
+    <tr>
+      <th id="add friend">filter by friend</th>
+      <th style="text-align: right" id="currency">currency</th>
+    </tr>
+    <tr>
+      <td id="type" class="center">type</td>
+      <td>name</td>
+      <td>Friends</td>
+      <td id="date">date</td>
+      <td style="text-align: right" id="amount">amount</td>
+      <td>Edit</td>
+      <td>Delete</td>
+    </tr>
+    <br><br>
+    <tr id="if-empty">
+      <td colspan="4"><span>Your added items will show up here!</span></td>
+    </tr>
+  </table>
+</form>
+<FORM action="#" onsubmit="return validateRequiredFields(this)" method="Post">
+	name: <input type= "text" name="name"/><br/>
+	Amount: <input type= "amount" name="amount"/><br/>
+	<INPUT type="button" value="Add a new expense"/>
+</FORM>
+<FORM action="#" onsubmit="return validateDate(this)" method="Post">
+	Enter Date (mm/dd/yyyy): <INPUT type="text" name="dateVa"/><BR/>
+	<INPUT type="submit" value="Validate"/>
+</FORM
+  </body>
+  </html>
